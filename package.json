@@ -1,0 +1,44 @@
+{
+  "name": "react-raf-marquee",
+  "version": "1.0.0",
+  "description": "A marquee component created to simulate the deprecated <marquee> tag using requestAnimationFrame",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeevan-Kishore/react-raf-marquee.git"
+  },
+  "keywords": [
+    "react",
+    "marquee",
+    "react",
+    "marquee",
+    "raf",
+    "marquee",
+    "component",
+    "infinite",
+    "marquee"
+  ],
+  "author": "Jeevan Kishore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jeevan-Kishore/react-raf-marquee/issues"
+  },
+  "homepage": "https://github.com/Jeevan-Kishore/react-raf-marquee#readme",
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "react-dom": "^16.2.0",
+    "rollup": "^0.65.2",
+    "rollup-plugin-babel": "^4.0.3"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm install && git diff --quiet && git tag v$(cat package.json | grep version | head -n1  | cut -d \\\" -f 4) && git push --tags origin master"
+  }
+}
